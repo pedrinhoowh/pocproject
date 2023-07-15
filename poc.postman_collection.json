@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "86a80c33-b01b-462d-8067-ca61a46ac1be",
+		"name": "poc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17185058"
+	},
+	"item": [
+		{
+			"name": "cadastro pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cria/pessoa?nome=Pedro&is_funcionario=S",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cria",
+						"pessoa"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Pedro"
+						},
+						{
+							"key": "is_funcionario",
+							"value": "S"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria projetos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"POC\",\n    \"dataInicio\": \"13/07/2023\",\n    \"dataPrevisaoFim\": \"18/08/2023\",\n    \"dataFim\": \"18/08/2023\",\n    \"descricao\": \"poc java\",\n    \"status\": \"em análise\",\n    \"orcamento\": 1000.0,\n    \"risco\": \"nenhum\",\n    \"idGerente\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/projetos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"projetos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterando projeto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"nome\": \"POC\",\n    \"dataInicio\": \"13/07/2023\",\n    \"dataPrevisaoFim\": \"18/08/2023\",\n    \"dataFim\": \"18/08/2023\",\n    \"descricao\": \"poc java ALTERADO\",\n    \"status\": \"em análise\",\n    \"orcamento\": 1000.0,\n    \"risco\": \"nenhum ALTERADO\",\n    \"idGerente\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/projetos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"projetos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscando projeto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/projetos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"projetos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete pessoa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/projetos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"projetos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Associando membros",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pessoa\": 1,\n    \"projeto\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/membros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"membros"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
