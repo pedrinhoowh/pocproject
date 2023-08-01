@@ -7,13 +7,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="projectregister" />
+        <module name="pocvtex-business" />
+        <module name="pocvtex-core" />
+        <module name="pocvtex-service" />
+        <module name="pocvtex-domain" />
+        <module name="pocvtex-repository" />
+        <module name="pocvtex-application" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="projectregister-application" target="11" />
+      <module name="projectregister-business" target="11" />
+      <module name="projectregister-repository" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="projectregister" options="-parameters" />
+      <module name="pocvtex" options="-parameters" />
+      <module name="pocvtex-application" options="-parameters" />
+      <module name="pocvtex-business" options="-parameters" />
+      <module name="pocvtex-core" options="-parameters" />
+      <module name="pocvtex-domain" options="-parameters" />
+      <module name="pocvtex-repository" options="-parameters" />
+      <module name="pocvtex-service" options="-parameters" />
+      <module name="projectregister-application" options="-parameters" />
+      <module name="projectregister-business" options="-parameters" />
+      <module name="projectregister-repository" options="-parameters" />
     </option>
   </component>
 </project>
